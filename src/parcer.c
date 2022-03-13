@@ -6,13 +6,11 @@
 /*   By: ntitan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:01:45 by ntitan            #+#    #+#             */
-/*   Updated: 2022/03/13 17:34:15 by ntitan           ###   ########.fr       */
+/*   Updated: 2022/03/13 22:59:58 by ntitan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
-
 
 static int	get_height(char *file_name)
 {
@@ -43,9 +41,11 @@ static int	get_width(char *file_name)
 	line = get_next_line(fd);
 	if (!line)
 	{
-		write(1, "Read file error.\n", 17);
-		close(fd);
-		exit(0);
+		if (write(1, "Read file error.\n", 17))
+		{
+			close(fd);
+			exit(0);
+		}
 	}
 	width = ft_linecounter(line, ' ');
 	close(fd);
@@ -58,8 +58,8 @@ void	write_matrix(int *z_line, char *line)
 	char	**nums;
 	int		i;
 
-	nums = ft_split(line, ' ');
 	i = 0;
+	nums = ft_split(line, ' ');
 	while (nums[i])
 	{
 		z_line[i] = ft_atoi(nums[i]);
@@ -68,7 +68,8 @@ void	write_matrix(int *z_line, char *line)
 	}
 	free(nums);
 }
-void	read_file(fdf *data, char *file_name)
+
+void	read_file(t_fdf *data, char *file_name)
 {
 	int		fd;
 	char	*line;
@@ -76,7 +77,6 @@ void	read_file(fdf *data, char *file_name)
 
 	data->height = get_height(file_name);
 	data->width = get_width(file_name);
-
 	data->z_matrix = (int **)malloc(sizeof(int *) * (data->height + 1));
 	data->z_matrix[data->height] = NULL;
 	i = 0;
@@ -92,5 +92,4 @@ void	read_file(fdf *data, char *file_name)
 		line = get_next_line(fd);
 	}
 	close(fd);
-	//data->z_matrix[i] = NULL;
 }

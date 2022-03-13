@@ -7,17 +7,18 @@ SOURCES = 	main \
 			get_next_line_utils\
 			draw\
 			parcer\
-			utils
+			utils\
+			utils_2
 			
 OBJ = ${addprefix $(SRC_DIR)/,$(SOURCES:=.o)}
 
 CC = gcc
-CFLAGS = -Wall -Wextra #-Werror#'-Dmalloc(__size)=memset(malloc(__size), 0, __size)'
-OBJFLAGS = -I/usr/include -Imlx_linux -O3
-LASTFLAGS = -Lmlx_linux minilibx-linux/libmlx_Linux.a -L/usr/lib -Imlx_linux ft_printf/libftprintf.a -lXext -lX11 -lm -lz
+CFLAGS = -Wall -Wextra -Werror
+OBJFLAGS = -I/usr/include -Imlx_linux -O3 #-g3
+LASTFLAGS = -Lmlx_linux minilibx-linux/libmlx_Linux.a -L/usr/lib -Imlx_linux ftprintf/libftprintf.a -lXext -lX11 -lm -lz
 
 %.o: %.c
-	${CC} ${OBJFLAGS} -c $< -o $@
+	${CC} ${CFLAGS} ${OBJFLAGS} -c $< -o $@
 
 $(NAME): ${OBJ}
 	${CC} ${OBJ} ${LASTFLAGS} -o ${NAME}
