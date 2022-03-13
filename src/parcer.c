@@ -6,7 +6,7 @@
 /*   By: ntitan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:01:45 by ntitan            #+#    #+#             */
-/*   Updated: 2022/03/13 17:16:08 by ntitan           ###   ########.fr       */
+/*   Updated: 2022/03/13 17:34:15 by ntitan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ void	read_file(fdf *data, char *file_name)
 	data->width = get_width(file_name);
 
 	data->z_matrix = (int **)malloc(sizeof(int *) * (data->height + 1));
+	data->z_matrix[data->height] = NULL;
 	i = 0;
 	while (i <= data->height)
 		data->z_matrix[i++] = (int *)malloc(sizeof(int) * (data->width + 1));
@@ -91,5 +92,5 @@ void	read_file(fdf *data, char *file_name)
 		line = get_next_line(fd);
 	}
 	close(fd);
-	data->z_matrix[i] = NULL;
+	//data->z_matrix[i] = NULL;
 }

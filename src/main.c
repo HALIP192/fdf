@@ -6,7 +6,7 @@
 /*   By: ntitan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:50:50 by ntitan            #+#    #+#             */
-/*   Updated: 2022/03/12 20:01:39 by ntitan           ###   ########.fr       */
+/*   Updated: 2022/03/13 17:26:07 by ntitan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	data_cleaner(fdf *data)
 	int j;
 
 	i = 0;
-	while (data->z_matrix[i])
+	while (i <= data->height)
 	{
 		free(data->z_matrix[i]);
 		i++;
