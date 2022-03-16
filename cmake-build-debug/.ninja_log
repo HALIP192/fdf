@@ -1,0 +1,16 @@
+# ninja log v5
+1	52	1647203957606877198	CMakeFiles/fdf.dir/src/get_next_line.c.o	5d433f46d911a74c
+1	37	1647203957590877407	CMakeFiles/fdf.dir/src/main.c.o	9a0ecc627263ba2
+0	61	1647203957614877093	CMakeFiles/fdf.dir/src/draw.c.o	a35338e4a0d5333c
+1	37	1647203957590877407	CMakeFiles/fdf.dir/src/parcer.c.o	9e4b107f2d6f705
+1	37	1647203957590877407	CMakeFiles/fdf.dir/src/get_next_line_utils.c.o	98a8fdfaea371e3d
+0	50	1647203957602877250	CMakeFiles/fdf.dir/src/utils_2.c.o	6c032c4dd3fbda31
+0	25	1647204392629206242	fdf	410d2d8a1b3843ac
+0	37	1647203957590877407	CMakeFiles/fdf.dir/src/utils.c.o	903e6406855420ad
+1	24	1647204458868346151	fdf	f9f384e57e55d436
+1	526	1647205763948545239	CMakeFiles/fdf.dir/src/parcer.c.o	9e4b107f2d6f705
+0	526	1647205763948545239	CMakeFiles/fdf.dir/src/utils.c.o	903e6406855420ad
+0	526	1647205763948545239	CMakeFiles/fdf.dir/src/main.c.o	9a0ecc627263ba2
+0	526	1647205763948545239	CMakeFiles/fdf.dir/src/utils_2.c.o	6c032c4dd3fbda31
+0	527	1647205763948545239	CMakeFiles/fdf.dir/src/draw.c.o	a35338e4a0d5333c
+527	863	1647205764284541043	fdf	f9f384e57e55d436

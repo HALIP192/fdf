@@ -1,0 +1,3 @@
+/home/ntitan/projects_school21/fdf/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ntitan/projects_school21/fdf/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ntitan/projects_school21/fdf/cmake-build-debug/CMakeFiles/fdf.dir
